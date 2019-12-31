@@ -1,23 +1,12 @@
 package com.example.jonathan.winter_project;
 
-import android.graphics.drawable.AnimationDrawable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import java.util.Set;
-import java.util.ArrayList;
-import android.widget.Toast;
-import android.widget.ArrayAdapter;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 import android.content.Intent;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private CardView Login;
@@ -62,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     public void openLoginSuccess()
     {
-        Intent intent = new Intent(this, login_success.class);
+        Intent intent = new Intent(this, MainPage.class);
         startActivity(intent);
     }
 }
