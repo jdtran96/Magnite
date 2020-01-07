@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    public static TextView data;
     private CardView Login;
     private TextView Reg;
 
