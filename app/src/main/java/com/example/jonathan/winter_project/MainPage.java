@@ -26,6 +26,7 @@ public class MainPage extends AppCompatActivity {
                 fetchData process = new fetchData();
                 process.execute();
                 //data.setText("button clicked succesfully");
+
             }
         });
 
