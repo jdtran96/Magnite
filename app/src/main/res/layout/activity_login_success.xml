@@ -7,22 +7,12 @@
     android:background="@color/darkBackground"
     tools:context=".MainPage">
 
-    <Button
-        android:id="@+id/json_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="150dp"
-        android:text="Retrieve Data"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/json_button">
+        android:layout_marginTop="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textEdit"
@@ -34,5 +24,15 @@
             android:textSize="24sp" />
 
     </ScrollView>
+
+    <Switch
+        android:id="@+id/LightState"
+        android:layout_width="129dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="154dp"
+        android:text="lightstate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -17,6 +17,7 @@ import java.net.URL;
 public class fetchData extends AsyncTask<Void,Void,Void>{
 String data = "";
 public static String onCondition = "";
+public static String offCondition = "";
 String jsonstring = "";
     @Override
     protected Void doInBackground(Void... voids) {
@@ -38,6 +39,7 @@ String jsonstring = "";
             try {
                 JSONObject jsonObject = new JSONObject(this.data);
                 onCondition = jsonObject.getString("test1");
+                offCondition = jsonObject.getString("test2");
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -55,7 +57,9 @@ String jsonstring = "";
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
         MainPage.data.setText(onCondition);
+    }
 
-
+    public void Process_two() {
+        MainPage.data.setText(offCondition);
     }
 }
