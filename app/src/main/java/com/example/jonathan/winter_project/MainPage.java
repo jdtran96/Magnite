@@ -14,6 +14,7 @@ public class MainPage extends AppCompatActivity {
     public static boolean light_state;
     public static TextView data;
     public static Switch LightStatus;
+    private static boolean ServerConnected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ public class MainPage extends AppCompatActivity {
                 process.Process_two();
             }
         });
+
+       ServerConnected = NetworkConnectConfirm.sendPingRequest();
 
 
 
