@@ -9,11 +9,13 @@ import android.widget.TextView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-public class MainPage extends AppCompatActivity {
+public class MainPage extends AppCompatActivity implements View.OnClickListener {
 
     public static boolean light_state;
     public static TextView data;
+    public static TextView CNCTConfirmText;
     public static Switch LightStatus;
+    public static Button Connected;
     private static boolean ServerConnected;
 
     @Override
@@ -21,28 +23,37 @@ public class MainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_success);
 
-        data = findViewById(R.id.textEdit);
-        LightStatus = findViewById(R.id.LightState);
+        Connected = findViewById(R.id.Verify_Connection);
+        Connected.setOnClickListener(this);
 
-        LightStatus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        LightStatus = findViewById(R.id.LightState);
+        LightStatus.setOnClickListener(this);
+
+        data = findViewById(R.id.textEdit);
+        CNCTConfirmText = findViewById(R.id.Connection_Text);
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.LightState:
+            {
                 fetchData process = new fetchData();
                 if(LightStatus.isChecked())
                 {
                     process.execute();
                 }
                 else
-                process.Process_two();
+                    process.Process_two();
+                break;
             }
-        });
-
-       ServerConnected = NetworkConnectConfirm.sendPingRequest();
-
-
-
-
+            case R.id.Verify_Connection:
+            {
+                NetworkConnectConfirm NetConfirm = new NetworkConnectConfirm();
+                NetConfirm.execute();
+            }
+        }
     }
-
-
 }

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Magnite</string>
     <string name="Default">Hello World!</string>
+    <string name="Reg_button">Register</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="M_logo">Magnite Logo</string>
 </resources>
