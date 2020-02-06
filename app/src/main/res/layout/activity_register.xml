@@ -80,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText2">
 
         <RelativeLayout
-            android:id="@+id/button_text_reg"
+            android:id="@+id/Submit"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
