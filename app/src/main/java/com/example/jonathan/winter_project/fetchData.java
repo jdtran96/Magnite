@@ -2,7 +2,6 @@ package com.example.jonathan.winter_project;
 
 import android.os.AsyncTask;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -59,7 +58,5 @@ String jsonstring = "";
         MainPage.data.setText(onCondition);
     }
 
-    public void Process_two() {
-        MainPage.data.setText(offCondition);
-    }
+    public void Process_two() { MainPage.data.setText(offCondition); }
 }

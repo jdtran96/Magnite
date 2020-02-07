@@ -2,23 +2,23 @@ package com.example.jonathan.winter_project;
 
 import android.os.AsyncTask;
 
-import java.io.*;
-import java.net.*;
-
-import static java.lang.Byte.decode;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 
 public class NetworkConnectConfirm extends AsyncTask<Void,Void,Void> {
-
 
     static String host = "192.168.4.1";
     //Sending ping to ServerIPGateway
     String holder = "";
 
+    public boolean reachableEXT = false;
+
     @Override
     protected Void doInBackground(Void... voids) {
 
-            boolean isReachable = false;
+          boolean isReachable = false;
             try {
                 InetAddress ESPGateway = InetAddress.getByName(host);
                 isReachable = ESPGateway.isReachable(2000);
@@ -37,6 +37,7 @@ public class NetworkConnectConfirm extends AsyncTask<Void,Void,Void> {
             return null;
 
     }
+
 
     @Override
     protected void onPostExecute(Void aVoid) {

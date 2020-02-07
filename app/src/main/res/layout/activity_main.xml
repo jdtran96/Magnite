@@ -29,12 +29,14 @@
         android:layout_height="49dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="200dp"
+        android:layout_marginEnd="100dp"
         android:drawableLeft="@drawable/ic_action_pass"
         android:hint="Password"
+        android:inputType="textPassword"
         android:textColor="#9ad7ef"
         android:textColorHint="@color/colorHintText"
         android:visibility="visible"
-        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -44,11 +46,13 @@
         android:layout_height="49dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="120dp"
+        android:layout_marginEnd="100dp"
         android:drawableLeft="@drawable/ic_action_email"
         android:hint="Email"
         android:textColor="#9ad7ef"
         android:textColorHint="@color/colorHintText"
         android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 

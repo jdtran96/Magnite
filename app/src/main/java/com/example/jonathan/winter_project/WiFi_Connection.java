@@ -6,10 +6,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.HashMap;
+
 public class WiFi_Connection extends AppCompatActivity {
 
+    HashMap<String, String> param;
     private Button Submit;
     public EditText SSID, PW;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

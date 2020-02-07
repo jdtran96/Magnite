@@ -1,14 +1,12 @@
 package com.example.jonathan.winter_project;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 public class MainPage extends AppCompatActivity implements View.OnClickListener {
 
     public static boolean light_state;
@@ -47,12 +45,19 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 }
                 else
                     process.Process_two();
+
+
                 break;
             }
             case R.id.Verify_Connection:
             {
                 NetworkConnectConfirm NetConfirm = new NetworkConnectConfirm();
                 NetConfirm.execute();
+                if(CNCTConfirmText.getText().toString() == "Server Successfully Connected!")
+                {
+                    Intent intent = new Intent(this, WiFi_Connection.class);
+                    startActivity(intent);
+                }
             }
         }
     }
