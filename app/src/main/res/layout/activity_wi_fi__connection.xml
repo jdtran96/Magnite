@@ -46,7 +46,8 @@
             android:id="@+id/WiFi_Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/Password" />
+            android:hint="@string/Password"
+            android:inputType="textPassword"/>
     </android.support.design.widget.TextInputLayout>
 
     <Button
@@ -58,5 +59,15 @@
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <TextView
+        android:id="@+id/PostResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="50dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WiFi_Submit" />
 
 </android.support.constraint.ConstraintLayout>

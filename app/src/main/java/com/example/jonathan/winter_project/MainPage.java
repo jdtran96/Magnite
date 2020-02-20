@@ -14,12 +14,13 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
     public static TextView CNCTConfirmText;
     public static Switch LightStatus;
     public static Button Connected;
+    public Button ToColorWheel;
     private static boolean ServerConnected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_success);
+        setContentView(R.layout.activity_main_page);
 
         Connected = findViewById(R.id.Verify_Connection);
         Connected.setOnClickListener(this);
@@ -29,6 +30,9 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
 
         data = findViewById(R.id.textEdit);
         CNCTConfirmText = findViewById(R.id.Connection_Text);
+
+        ToColorWheel = findViewById(R.id.Color_Selector);
+        ToColorWheel.setOnClickListener(this);
     }
 
 
@@ -58,7 +62,16 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                     Intent intent = new Intent(this, WiFi_Connection.class);
                     startActivity(intent);
                 }
+                break;
             }
+
+            case R.id.Color_Selector:
+            {
+                Intent intent = new Intent(this,ColorPicker.class);
+                startActivity(intent);
+                break;
+            }
+
         }
     }
 }
