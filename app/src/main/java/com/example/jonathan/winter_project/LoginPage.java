@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.content.Intent;
 
@@ -12,6 +13,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
     public static TextView data;
     private CardView Login;
     private TextView Reg;
+    private ImageView LoginLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
         Login.setOnClickListener(this);
         Reg = (TextView) findViewById(R.id.Reg_Link);
         Reg.setOnClickListener(this);
+        LoginLogo = (ImageView) findViewById(R.id.MagniteLogo);
+        LoginLogo.setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +45,9 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
             case R.id.Reg_Link:
                 openRegister();
                 break;
+            case R.id.MagniteLogo:
+                openCredits();
+                break;
         }
 
     }
@@ -53,6 +60,11 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
     public void openLoginSuccess()
     {
         Intent intent = new Intent(this, MainPage.class);
+        startActivity(intent);
+    }
+    public void openCredits()
+    {
+        Intent intent = new Intent(this, Credits.class);
         startActivity(intent);
     }
 }
