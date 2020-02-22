@@ -11,12 +11,11 @@
         android:id="@+id/colorPickerView"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
         app:palette="@drawable/palette"
         app:selector="@drawable/wheel" />
 
@@ -24,10 +23,11 @@
         android:id="@+id/textView2"
         android:layout_width="71dp"
         android:layout_height="21dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="32dp"
         android:text="Hex Value:"
         android:textColor="@color/colorHintText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/colorPickerView" />
 
@@ -36,10 +36,10 @@
         android:layout_width="141dp"
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
-        android:textColor="@color/colorHintText"
         android:inputType="textPersonName"
+        android:textColor="@color/colorHintText"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/colorPickerView" />
 
