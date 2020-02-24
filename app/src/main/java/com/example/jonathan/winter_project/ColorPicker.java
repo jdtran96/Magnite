@@ -15,6 +15,10 @@ public class ColorPicker extends AppCompatActivity {
     public ColorPickerView colorPicker;
     public EditText colorHex;
     public CardView ColorD;
+    public EditText Rcolor,Gcolor,Bcolor;
+
+    int array[] = new int[3];
+    int r,g,b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,9 @@ public class ColorPicker extends AppCompatActivity {
         colorPicker = findViewById(R.id.colorPickerView);
         colorHex = findViewById(R.id.Hex_Value_Edit);
         ColorD = findViewById(R.id.colorDisplay);
+        Rcolor = findViewById(R.id.Rnum);
+        Gcolor = findViewById(R.id.Gnum);
+        Bcolor = findViewById(R.id.Bnum);
 
         colorPicker.setColorListener(new ColorListener() {
 
@@ -31,6 +38,13 @@ public class ColorPicker extends AppCompatActivity {
             public void onColorSelected(ColorEnvelope colorEnvelope) {
                 colorHex.setText(colorEnvelope.getColorHtml());
                 ColorD.setCardBackgroundColor(colorEnvelope.getColor());
+               array = colorEnvelope.getColorRGB();
+               r = array[0];
+               g = array[1];
+               b = array[2];
+            // Rcolor.setText(r);
+              // Gcolor.setText(g);
+              // Bcolor.setText(b);
             }
         });
 
