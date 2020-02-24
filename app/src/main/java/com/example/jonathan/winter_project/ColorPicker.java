@@ -9,6 +9,7 @@ import com.skydoves.colorpickerpreference.ColorEnvelope;
 import com.skydoves.colorpickerpreference.ColorListener;
 import com.skydoves.colorpickerpreference.ColorPickerView;
 
+
 public class ColorPicker extends AppCompatActivity {
 
     public ColorPickerView colorPicker;
@@ -25,13 +26,12 @@ public class ColorPicker extends AppCompatActivity {
         ColorD = findViewById(R.id.colorDisplay);
 
         colorPicker.setColorListener(new ColorListener() {
+
             @Override
             public void onColorSelected(ColorEnvelope colorEnvelope) {
-
-               colorHex.setText(colorEnvelope.getColorHtml());
-               ColorD.setCardBackgroundColor(colorEnvelope.getColor());
+                colorHex.setText(colorEnvelope.getColorHtml());
+                ColorD.setCardBackgroundColor(colorEnvelope.getColor());
             }
-
         });
 
     }
