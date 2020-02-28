@@ -42,9 +42,12 @@ public class ColorPicker extends AppCompatActivity {
                r = array[0];
                g = array[1];
                b = array[2];
-            // Rcolor.setText(r);
-              // Gcolor.setText(g);
-              // Bcolor.setText(b);
+              String r_string = Integer.toString(r);
+              String g_string = Integer.toString(g);
+              String b_string = Integer.toString(b);
+             Rcolor.setText(r_string);
+              Gcolor.setText(g_string);
+              Bcolor.setText(b_string);
             }
         });
 
