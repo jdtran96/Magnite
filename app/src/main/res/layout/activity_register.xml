@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_3"
+    android:background="@color/darkerBackground"
     tools:context=".LoginPage">
 
     <ImageView
@@ -23,7 +23,7 @@
         app:srcCompat="@drawable/m_logo" />
 
     <android.support.design.widget.TextInputEditText
-        android:id="@+id/textInputEditText"
+        android:id="@+id/pwInput"
         android:layout_width="213dp"
         android:layout_height="49dp"
         android:layout_marginTop="10dp"
@@ -31,13 +31,14 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:textColorHint="@color/colorHintText"
+        android:textColor="@color/colorCard"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText3" />
+        app:layout_constraintTop_toBottomOf="@+id/email_Input" />
 
     <android.support.design.widget.TextInputEditText
-        android:id="@+id/textInputEditText2"
+        android:id="@+id/confirm"
         android:layout_width="213dp"
         android:layout_height="49dp"
         android:layout_marginTop="10dp"
@@ -45,18 +46,20 @@
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:textColorHint="@color/colorHintText"
+        android:textColor="@color/colorCard"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/pwInput" />
 
     <android.support.design.widget.TextInputEditText
-        android:id="@+id/textInputEditText3"
+        android:id="@+id/email_Input"
         android:layout_width="213dp"
         android:layout_height="49dp"
         android:drawableLeft="@drawable/ic_action_email"
         android:hint="@string/Email"
         android:textColorHint="@color/colorHintText"
+        android:textColor="@color/colorCard"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +71,7 @@
         android:id="@+id/reg_button"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        app:cardBackgroundColor="#9ad7ef"
+        app:cardBackgroundColor="#00FF70"
         app:cardCornerRadius="25dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,8 +103,8 @@
         android:layout_marginBottom="10dp"
         android:text="New User Registration"
         android:textColor="@color/colorHintText"
-        app:layout_constraintBottom_toTopOf="@+id/textInputEditText3"
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText3" />
+        app:layout_constraintBottom_toTopOf="@+id/email_Input"
+        app:layout_constraintStart_toStartOf="@+id/email_Input" />
 
 
 </android.support.constraint.ConstraintLayout>

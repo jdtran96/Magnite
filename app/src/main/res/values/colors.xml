@@ -6,4 +6,5 @@
     <color name="colorCard">#9ad7ef</color>
     <color name="colorHintText">#C4C4C4</color>
     <color name="darkBackground">#4A4A4A</color>
+    <color name="darkerBackground">#242424</color>
 </resources>

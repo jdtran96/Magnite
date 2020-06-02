@@ -45,7 +45,7 @@ public class ColorPicker extends AppCompatActivity {
               String r_string = Integer.toString(r);
               String g_string = Integer.toString(g);
               String b_string = Integer.toString(b);
-             Rcolor.setText(r_string);
+              Rcolor.setText(r_string);
               Gcolor.setText(g_string);
               Bcolor.setText(b_string);
             }
