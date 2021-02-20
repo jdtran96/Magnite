@@ -6,7 +6,7 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkerBackground"
+    android:background="@color/cardview_dark_background"
     tools:context=".LoginPage">
 
     <ImageView
@@ -25,7 +25,7 @@
         app:srcCompat="@drawable/m_logo" />
 
     <android.support.design.widget.TextInputEditText
-        android:id="@+id/confirm"
+        android:id="@+id/textInputEditText2"
         android:layout_width="213dp"
         android:layout_height="49dp"
         android:layout_marginTop="10dp"
@@ -37,10 +37,10 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pwInput" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
     <android.support.design.widget.TextInputEditText
-        android:id="@+id/pwInput"
+        android:id="@+id/textInputEditText"
         android:layout_width="213dp"
         android:layout_height="49dp"
         android:drawableLeft="@drawable/ic_action_email"
@@ -58,7 +58,7 @@
         android:id="@+id/Login_Button"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        app:cardBackgroundColor="#00FF70"
+        app:cardBackgroundColor="#9ad7ef"
         app:cardCornerRadius="25dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Register"
-        android:textColor="#00FF70"
+        android:textColor="#9ad7ef"
         android:textColorLink="#9ad7ef"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
