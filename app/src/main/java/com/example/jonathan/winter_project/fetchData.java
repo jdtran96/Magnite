@@ -22,7 +22,7 @@ String jsonstring = "";
     protected Void doInBackground(Void... voids) {
 
         try {
-            URL url = new URL("https://api.myjson.com/bins/7i61c");                            //To access JSON file for editing, URL = http://myjson.com/7i61c
+            URL url = new URL("https://api.myjson.com/bins/7i61c");                            //To access JSON file for editing, URL = http://myjson.com/7i61c (out of date, need to update hosting website)
 
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             InputStream inputStream = httpURLConnection.getInputStream();
